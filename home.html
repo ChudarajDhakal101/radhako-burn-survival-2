@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Purbeli supermarket</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="./home.html">Home</a>
+            <a href="./about.html">About-us</a>
+            <a href="./contact.html">Contact-us</a>
+            <a href="products.html">Products</a>
+            <a href="./login.html"><img src="./Burn_survivor/login.png" height="auto" width="40px"></a>
+
+        </div>
+        <!---------------------------------------------slideshow---------------------------------->
+        <div class="slideshow-container">
+            <div class="slides">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="./Burn_survivor/banner.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="./Burn_survivor/banner2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="./Burn_survivor/88397679_891134134639648_6112987941208850432_n.jpg" style="width:100%">
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div style="text-align:center" class="slider-dots">
+        </div>
+        <!---------------------------------------------slideshow---------------------------------->
+        <!------------------------------------java script------------------------------------------->
+        <script>
+            let slides = document.querySelectorAll('.slideshow-container .mySlides');
+            let sliderContainer = document.querySelector('.slideshow-container .slides');
+            let sliderBtnContainer = document.querySelector('.slider-dots');
+            slides.forEach(slide => {
+                sliderBtnContainer.innerHTML += `
+                <span class="dot"></span>
+                `
+            })
+            let sliderBtns = document.querySelectorAll('.slider-dots .dot');
+            sliderBtns.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    sliderContainer.style.transform = `translateX(-${index * 100}%)`;
+                })
+            })
+        </script>
+        <!------------------------------------java script------------------------------------------->
+        <div class="footer">
+            <div class="footer-1">
+                <h1>For more</h1>
+                <p>Ratings</p>
+                <a href="./login.html">Login</a>
+            </div>
+            <div class="footer-2">
+                <h1>GET IN TOUCH</h1>
+                <a href="./contact.html">Contact us</a><br>
+                <a href="./about.html">About us </a>
+                <p>Terms and conditions</p>
+                <p>Follow us on Facebook and Google</p>
+            </div>
+            <div class="footer-images">
+                <div class="facebook-logo">
+                    <img src="./Burn_survivor/facebook logo.png" height="50px" width="50px">
+                </div>
+                <img src="./Burn_survivor/google logo.png" height="50px" width="auto">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
